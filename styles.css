@@ -51,7 +51,7 @@ a{text-decoration:none;color:inherit;}
   background:var(--glass);border-bottom:1px solid var(--glass-border);box-shadow:var(--shadow-soft);
   transition:var(--transition);}
 .nav-wrapper{display:flex;justify-content:space-between;align-items:center;padding:14px 0;}
-.logo{font-family:"Playfair Display",serif;font-size:1.38rem;font-weight:700;color:var(--accent);
+.logo{font-family:"Playfair Display",serif;font-size:1.38rem;font-weight:700;color:black;
   transition:transform var(--transition);}
 .logo:hover{transform:translateY(-3px) scale(1.05);}
 .nav-list{list-style:none;display:flex;gap:20px;}
@@ -212,7 +212,7 @@ a {
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--primary);
+  color: black;
 }
 
 .nav {
@@ -522,7 +522,7 @@ a {
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--primary);
+  color: black;
 }
 
 .nav {
@@ -767,7 +767,7 @@ body.dark .site-header {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: 1.6rem;
-  color: #28a745;
+  color: black;
   transition: color 0.3s;
 }
 
@@ -1280,3 +1280,168 @@ body.dark .site-header {
   }
 }
 
+/* ------------------------------
+   SEÇÃO: O QUE VOCÊ RECEBE
+------------------------------ */
+.section.intros {
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.section.intros h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  color: #2c2c2c;
+}
+
+.grids {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.cards {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1.8rem;
+  width: 270px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.07);
+  text-align: left;
+  transition: 0.3s ease;
+  border-left: 5px solid #4CAF50;
+}
+
+.cards:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+.cards h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.7rem;
+  color: #333;
+}
+
+.cards p {
+  color: #555;
+  line-height: 1.5rem;
+}
+
+
+
+/* ------------------------------
+ SEÇÃO: COMO FUNCIONA
+------------------------------ */
+.section.steps {
+  padding: 4rem 1.5rem;
+  background: #f8f8f9;
+  text-align: center;
+}
+
+.section.steps h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.step-list {
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 1.05rem;
+  line-height: 1.7rem;
+  color: #444;
+  padding-left: 1.2rem;
+}
+
+.step-list li {
+  margin-bottom: 1.1rem;
+}
+
+
+
+/* ------------------------------
+ SEÇÃO: FORMULÁRIO / CHAMADA
+------------------------------ */
+.section.call {
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.section.call h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.section.call p {
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+.form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  background: #fafafa;
+  transition: 0.3s ease;
+}
+
+.form input:focus,
+.form textarea:focus {
+  border-color: #4CAF50;
+  background: #fff;
+  outline: none;
+}
+
+.btn-primary {
+  background: #25d366;
+  color: #fff;
+  padding: 1rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #1ebe5b;
+  transform: translateY(-3px);
+}
+
+
+
+/* ------------------------------
+ RESPONSIVIDADE
+------------------------------ */
+@media (max-width: 768px) {
+  .cards {
+      width: 90%;
+  }
+
+  .grids {
+      gap: 1.2rem;
+  }
+
+  .section.intros h2,
+  .section.steps h2,
+  .section.call h2 {
+      font-size: 1.7rem;
+  }
+}
