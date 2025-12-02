@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfólio — Estefany</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a class="logo" href="index.html">@ste_trip</a>
+      <nav class="nav">
+        <button class="nav-toggle" aria-label="Abrir menu">☰</button>
+        <ul class="nav-list">
+          <li><a href="portifolio.html">Portfólio</a></li>
+          <li><a href="roteiros.html">Roteiro Personalizados</a></li>
+          <li><a href="consultoria.html">Consultoria</a></li>
+          <li><a href="guia.html">Guia</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<section id="consultoria" class="ig-card">
+    <h2 class="ig-title">Consultoria de Milhas para Iniciantes</h2>
+
+    <form id="formMilhas" class="ig-form">
+        <label>Nome completo*</label>
+        <input type="text" id="nome" required>
+
+        <label>E-mail*</label>
+        <input type="email" id="email" required>
+
+        <label>WhatsApp com DDD*</label>
+        <input type="tel" id="whatsapp" placeholder="Ex: 31999998888" required>
+
+        <label>Você tem cartão de crédito?</label>
+        <select id="cartao">
+            <option value="Não">Não</option>
+            <option value="Sim">Sim</option>
+        </select>
+
+        <label>Se sim, qual banco/cartão?</label>
+        <input type="text" id="qualCartao" placeholder="Ex: Nubank, C6, Itaú...">
+
+        <label>Quantas milhas você tem atualmente?</label>
+        <select id="milhas">
+            <option value="0">0</option>
+            <option value="1 - 10.000">1 - 10.000</option>
+            <option value="10.001 - 30.000">10.001 - 30.000</option>
+            <option value="30.001 - 60.000">30.001 - 60.000</option>
+            <option value="60.001 - 100.000">60.001 - 100.000</option>
+            <option value="Acima de 100.000">Acima de 100.000</option>
+        </select>
+
+        <label>Qual seu conhecimento sobre milhas?</label>
+        <select id="conhecimento">
+            <option value="Nenhum">Nenhum</option>
+            <option value="Básico">Básico</option>
+            <option value="Intermediário">Intermediário</option>
+            <option value="Avançado">Avançado</option>
+        </select>
+
+        <label>Qual seu objetivo com a consultoria?</label>
+        <textarea id="objetivo" rows="3" required></textarea>
+
+        <label>Para onde deseja viajar?</label>
+        <select id="destino">
+            <option value="América do Sul">América do Sul</option>
+            <option value="América do Norte">América do Norte</option>
+            <option value="Europa">Europa</option>
+            <option value="Ásia">Ásia</option>
+            <option value="África">África</option>
+            <option value="Oceania">Oceania</option>
+            <option value="Antártida">Antártida</option>
+        </select>
+
+        <label>Que tipo de viajante você é?</label>
+        <select id="viajante">
+            <option value="Econômico">Econômico</option>
+            <option value="Conforto moderado">Conforto moderado</option>
+            <option value="Luxo">Luxo</option>
+            <option value="Aventureiro">Aventureiro</option>
+        </select>
+
+        <label>Dúvidas adicionais</label>
+        <textarea id="duvidas" rows="3"></textarea>
+
+        <div class="btn-group">
+            <button type="button" class="btn-ig wpp" onclick="enviarWhatsApp()">Enviar pelo WhatsApp</button>
+        </div>
+    </form>
+</section>
+<footer class="site-footer">
+    <div class="container footer-inner">
+      <small>© <span id="year"></span> Estefany</small>
+      <div class="socials">
+        <a href="https://www.instagram.com/ste_trip?igsh=NWs3OGFjZjVpOG1i" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://wa.me/5531971183321" target="_blank" aria-label="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+      </a>
+      </div>
+    </div>
+  </footer>
+<script src="javascript/script.js" defer></script>
+</body>
+</html>
