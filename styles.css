@@ -1280,6 +1280,9 @@ body.dark .site-header {
   }
 }
 
+/* ================================
+   SEÇÃO: O que você recebe
+================================ */
 .intrs {
   max-width: 1100px;
   margin: 60px auto;
@@ -1439,3 +1442,4 @@ body.dark .site-header {
       font-size: 1.7rem;
   }
 }
+
