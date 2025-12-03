@@ -65,71 +65,100 @@
 
 
 <section class="guias">
-  <div class="card1">
+  <button type="button" class="card-btn">
     <img src="fotos/foto_perfil/embreve.png" alt="Em breve" />
     <h4>Buenos Aires</h4>
-  </div>
+    <span class="preco"></span>
+    <div class="overlay"><span>📱 WhatsApp</span></div>
+  </button>
 
-  <div class="card1">
+  <button type="button" class="card-btn">
     <img src="fotos/foto_perfil/embreve.png" alt="Em breve" />
     <h4>UShuaia</h4>
-  </div>
+    <span class="preco"></span>
+    <div class="overlay"><span>📱 WhatsApp</span></div>
+  </button>
 
-  <div class="card1">
+  <button type="button" class="card-btn">
     <img src="fotos/foto_perfil/embreve.png" alt="Em breve" />
     <h4>Madri</h4>
-  </div>
+    <span class="preco"></span>
+    <div class="overlay"><span>📱 WhatsApp</span></div>
+  </button>
 </section>
-<section class="guias">
-  <div class="card1">
-    <img src="fotos/fotos_colombia/foto13.jpeg" alt="CARTAGENA" />
-    <h4>CARTAGENA</h4>
-  </div>
 
-  <div class="card1">
+<section class="guias">
+  <button type="button" class="card-btn">
+    <img src="fotos/fotos_colombia/foto13.jpeg" alt="CARTAGENA"/>
+    <h4>CARTAGENA</h4>
+    <span class="preco">R$ 79,90</span>
+    <div class="overlay"><span>📱 WhatsApp</span></div>
+  </button>
+
+  <button type="button" class="card-btn">
     <img src="fotos/fotos_colombia/foto17.jpeg" alt="SAN ANDRÉS" />
     <h4>SAN ANDRÉS</h4>
-  </div>
+    <span class="preco">R$ 79,90</span>
+    <div class="overlay"><span>📱 WhatsApp</span></div>
+  </button>
 
-  <div class="card1">
+  <button type="button" class="card-btn">
     <img src="fotos/fotos_foz/foto3.jpeg" alt="Foz do Iguaçu" />
     <h4>Foz do Iguaçu</h4>
-  </div>
+    <span class="preco">R$ 59,90</span>
+    <div class="overlay"><span>📱 WhatsApp</span></div>
+  </button>
 </section>
+
 <section class="guias">
-  <div class="card1">
+  <button type="button" class="card-btn">
     <img src="fotos/foto_chile/foto15.jpeg" alt="SANTIAGO" />
     <h4>Chile</h4>
-  </div>
+    <span class="preco">R$ 79,90</span>
+    <div class="overlay"><span>📱 WhatsApp</span></div>
+  </button>
 
-  <div class="card1">
-    <img src="fotos/fotos_amazonia/foto19.jpeg" alt=" AMAZÔNIA" />
-    <h4> AMAZÔNIA</h4>
-  </div>
+  <button type="button" class="card-btn">
+    <img src="fotos/fotos_amazonia/foto19.jpeg" alt="AMAZÔNIA" />
+    <h4>AMAZÔNIA</h4>
+    <span class="preco">R$ 59,90</span>
+    <div class="overlay"><span>📱 WhatsApp</span></div>
+  </button>
 
-  <div class="card1">
+  <button type="button" class="card-btn">
     <img src="fotos/fotos_amazonia/foto13.jpeg" alt="Manaus" />
     <h4>Manaus</h4>
-  </div>
+    <span class="preco">R$ 59,90</span>
+    <div class="overlay"><span>📱 WhatsApp</span></div>
+  </button>
 </section>
-<section class="guias">
-  <div class="card1">
-    <img src="fotos/fotos.florianopolis/foto4.jpeg" alt=" FLORIANÓPOLIS"/>
-    <h4> FLORIANÓPOLIS</h4>
-  </div>
 
-  <div class="card1">
+<section class="guias">
+  <button type="button" class="card-btn">
+    <img src="fotos/fotos.florianopolis/foto4.jpeg" alt="FLORIANÓPOLIS"/>
+    <h4>FLORIANÓPOLIS</h4>
+    <span class="preco">R$ 59,90</span>
+    <div class="overlay"><span>📱 WhatsApp</span></div>
+  </button>
+
+  <button type="button" class="card-btn">
     <img src="fotos/fotos_rio/foto4.jpeg" alt="Rio de Janeiro" />
     <h4>Rio de Janeiro</h4>
-  </div>
+    <span class="preco">R$ 59,90</span>
+    <div class="overlay"><span>📱 WhatsApp</span></div>
+  </button>
 
-  <div class="card1">
+  <button type="button" class="card-btn">
     <img src="fotos/fotos_betocarreiro/foto3.jpeg" alt="Navegante/Beto Carreiro/ Balneario" />
     <h4>Navegante/Beto Carreiro/ Balneario</h4>
-  </div>
-
-
+    <span class="preco">R$ 59,90</span>
+    <div class="overlay"><span>📱 WhatsApp</span></div>
+  </button>
 </section>
+
+
+
+
 <footer class="site-footer">
   <div class="container footer-inner">
     <small>© <span id="year"></span> Estefany</small>
@@ -151,5 +180,32 @@
 <button id="topButton">⬆</button>
 
 <script src="script.js"></script>
+<script>
+ document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".card-btn"); // seleciona todos os cards
+  const numeroDestino = "553171183321"; // substitua pelo número real
+
+  // Fade-in sequencial
+  cards.forEach((card, index) => {
+    card.style.opacity = 0;
+    card.style.transform = "translateY(20px)";
+    setTimeout(() => {
+      card.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+      card.style.opacity = 1;
+      card.style.transform = "translateY(0)";
+    }, index * 150);
+  });
+
+  // Clique para abrir WhatsApp com destino específico
+  cards.forEach(card => {
+    card.addEventListener("click", () => {
+      const destino = card.querySelector("h4").textContent.trim(); // pega o destino do h4
+      const mensagem = `Gostaria de fechar o guia para ${destino}`;
+      const url = `https://wa.me/${numeroDestino}?text=${encodeURIComponent(mensagem)}`;
+      window.open(url, "_blank");
+    });
+  });
+});
+</script>
 </body>
 </html>

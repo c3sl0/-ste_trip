@@ -81,10 +81,10 @@
 
     <!-- BLOCO VERDE -->
     <section class="bloco-verde">
-        <h2>E você ainda pode contratar minha assessoria completa!</h2>
-        <p>Planejamento total da sua viagem: aéreo, hospedagem, passeios, experiências e reservas.</p>
-        <a href="https://wa.me/5531971183321" class="btn wpp">Para valores da assessoria →</a>
-    </section>
+      <h2>E você ainda pode contratar minha assessoria completa!</h2>
+      <p>Planejamento total da sua viagem: aéreo, hospedagem, passeios, experiências e reservas.</p>
+      <a href="#" id="btnAssessoria" class="btn wpp">Para valores da assessoria →</a>
+  </section>
 
 <footer class="site-footer">
         <div class="container footer-inner">
@@ -102,5 +102,34 @@
           </div>
         </div>
 </footer>
+
+<script>
+  // Número do WhatsApp
+const numeroWhats = "5531971183321";
+
+// Variável para armazenar o destino selecionado
+let destinoSelecionado = "";
+
+// Captura clique nos cards de destino
+document.querySelectorAll(".card1, .card-btn").forEach(card => {
+    card.addEventListener("click", () => {
+        destinoSelecionado = card.querySelector("h4").textContent;
+        // Abrir WhatsApp diretamente ao clicar no card, se quiser
+        window.open(`https://wa.me/${numeroWhats}?text=${encodeURIComponent("Gostaria de fechar esse guia de " + destinoSelecionado)}`, "_blank");
+    });
+});
+
+// Botão da assessoria
+document.getElementById("btnAssessoria").addEventListener("click", (e) => {
+    e.preventDefault(); // Impede o link padrão
+    // Mensagem personalizada
+    const mensagem = destinoSelecionado
+        ? `Olá, gostaria de contratar a assessoria completa para minha viagem a ${destinoSelecionado}.`
+        : "Olá, gostaria de contratar a assessoria completa para minha viagem.";
+    // Abrir WhatsApp
+    window.open(`https://wa.me/${numeroWhats}?text=${encodeURIComponent(mensagem)}`, "_blank");
+});
+
+</script>
 </body>
 </html>
