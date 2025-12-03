@@ -9,20 +9,20 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav-wrapper">
-      <a class="logo" href="index.html">@ste_trip</a>
-      <nav class="nav">
-        <button class="nav-toggle" aria-label="Abrir menu">☰</button>
-        <ul class="nav-list">
-          <li><a href="roteiros.html">Roteiro Personalizados</a></li>
-          <li><a href="consultoria.html">Consultoria</a></li>
-          <li><a href="consultoria.html">Guia</a></li>
-          <li><a href="mentoria.html">Mentoria</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+
+<header class="site-header">
+  <div class="container nav-wrapper">
+    <a class="logo" href="index.html">@ste_trip</a>
+    <nav class="nav">
+      <button class="nav-toggle" aria-label="Abrir menu">☰</button>
+      <ul class="nav-list">
+        <li><a href="portifolio.html">Portfólio</a></li>
+        <li><a href="roteiros.html">Roteiros</a></li>
+        <li><a href="consultoria.html">Consultoria</a></li>
+        <li><a href="mentoria.html">Mentoria</a></li>
+      </ul>
+    </nav>
+  </div>
 
   <main>
     <section class="hero">
@@ -73,7 +73,23 @@
       </div>
     </div>
   </footer>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const navToggle = document.querySelector(".nav-toggle");
+  const navList = document.querySelector(".nav-list");
 
+  navToggle.addEventListener("click", () => {
+    navList.classList.toggle("show");
+  });
+
+  // Fechar menu ao clicar em um link
+  navList.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      navList.classList.remove("show");
+    });
+  });
+});
+</script>
   <script src="scripts.js" defer></script>
 </body>
 </html>

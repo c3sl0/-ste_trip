@@ -11,8 +11,8 @@
   --bg: #ffffff;
   --text: #222;
   --text-light: #555;
-  --primary: #e63946;
-  --primary-dark: #d62839;
+  --primary: #007aff;
+  --primary-dark: #007aff;
   --radius: 14px;
   --shadow: 0 6px 18px rgba(0,0,0,0.08);
   --container: 1200px;
@@ -50,61 +50,60 @@ body {
 ======================================= */
 .site-header {
   width: 100%;
-  background: #fff;
-  position: fixed;
+  background: var(--bg);
+  position: sticky;
   top: 0;
   left: 0;
   z-index: 999;
   box-shadow: var(--shadow);
-  transition: background 0.3s ease, box-shadow 0.3s ease;
-}
-
-.site-header.transparent {
-  background: rgba(255, 255, 255, 0.2); /* semi-transparente */
-  box-shadow: none; /* remove a sombra quando transparente */
-  backdrop-filter: blur(8px); /* efeito de desfoque opcional */
+  transition: background 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
+  padding: 20px 2rem;
 }
 
 .nav-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 0;
 }
 
 .logo {
-  font-family: "Playfair Display", serif;
-  font-size: 1.8rem;
-  font-weight: 600;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
   text-decoration: none;
   color: var(--text);
   letter-spacing: .5px;
+  transition: font-size 0.3s ease;
 }
 
-/* NAVIGATION */
+/* NAV */
 .nav-list {
-  list-style: none;
   display: flex;
+  list-style: none;
   gap: 28px;
+  transition: max-height 0.3s ease;
 }
 
-.nav-list a {
+.nav-list li a {
   text-decoration: none;
   color: var(--text);
   font-weight: 500;
   transition: var(--transition);
 }
 
-.nav-list a:hover {
+.nav-list li a:hover {
   color: var(--primary);
 }
 
-/* Mobile button */
+/* HAMBURGER */
 .nav-toggle {
   display: none;
+  font-size: 2rem;
   background: none;
   border: none;
-  font-size: 2rem;
+  cursor: pointer;
+  color: var(--text);
+  transition: color 0.3s ease;
 }
 
 /* =======================================
@@ -1589,7 +1588,7 @@ section.hero2 {
   width: 100%;             
   height: 350px;           
   overflow: hidden;
-  border-radius: 20px;
+  
   margin-bottom: 2rem;
   background-color: #f0f0f0;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
@@ -1607,7 +1606,7 @@ section.hero2 img {
   height: 100%;
   object-fit: cover;       
   display: block;
-  border-radius: 20px;
+  
   position: absolute;      /* atrás do texto */
   top: 0;
   left: 0;

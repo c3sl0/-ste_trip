@@ -9,22 +9,19 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-  <header class="site-header">
-    <div class="container nav-wrapper">
-      <a class="logo" href="index.html">@ste_trip</a>
-      <nav class="nav">
-        <button class="nav-toggle" aria-label="Abrir menu">☰</button>
-        <ul class="nav-list">
-          <li><a href="roteiros.html">Roteiro Personalizados</a></li>
-          <li><a href="consultoria.html">Consultoria</a></li>
-          <li><a href="guia.html">Guia</a></li>
-          <li><a href="mentoria.html">Mentoria</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
+<header class="site-header">
+  <div class="container nav-wrapper">
+    <a class="logo" href="index.html">@ste_trip</a>
+    <nav class="nav">
+      <button class="nav-toggle" aria-label="Abrir menu">☰</button>
+      <ul class="nav-list">
+        <li><a href="portifolio.html">Portfólio</a></li>
+        <li><a href="roteiros.html">Roteiros</a></li>
+        <li><a href="consultoria.html">Consultoria</a></li>
+        <li><a href="mentoria.html">Mentoria</a></li>
+      </ul>
+    </nav>
+  </div>
 
       <section class="trajetoria">
         <h2>Minha Trajetória</h2>
@@ -274,7 +271,31 @@
       </div>
     </div>
   </footer>
+  <script>
+// Menu hamburguer
+const navToggle = document.querySelector('.nav-toggle');
+const navList = document.querySelector('.nav-list');
 
+navToggle.addEventListener('click', () => {
+  navList.classList.toggle('show');
+  navToggle.classList.toggle('open');
+});
+
+// Voltar ao topo
+const topButton = document.getElementById('topButton');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    topButton.style.display = "block";
+  } else {
+    topButton.style.display = "none";
+  }
+});
+
+topButton.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+  </script>
   <script src="javascript/script.js" defer></script>
 </body>
 </html>
