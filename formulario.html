@@ -26,80 +26,206 @@
     </div>
   </header>
 
-<section id="consultoria" class="ig-card">
+  <section id="consultoria" class="ig-carde">
     <h2 class="ig-title">Consultoria de Milhas para Iniciantes</h2>
-
-    <form id="formMilhas" class="ig-form">
-        <label>Nome completo*</label>
+  
+    <form id="formMilhas" class="ig-form" novalidate>
+      <div class="form-group">
+        <label for="nome">Nome completo*</label>
         <input type="text" id="nome" required>
-
-        <label>E-mail*</label>
-        <input type="email" id="email" required>
-
-        <label>WhatsApp com DDD*</label>
-        <input type="tel" id="whatsapp" placeholder="Ex: 31999998888" required>
-
-        <label>Você tem cartão de crédito?</label>
-        <select id="cartao">
-            <option value="Não">Não</option>
-            <option value="Sim">Sim</option>
-        </select>
-
-        <label>Se sim, qual banco/cartão?</label>
-        <input type="text" id="qualCartao" placeholder="Ex: Nubank, C6, Itaú...">
-
-        <label>Quantas milhas você tem atualmente?</label>
-        <select id="milhas">
-            <option value="0">0</option>
-            <option value="1 - 10.000">1 - 10.000</option>
-            <option value="10.001 - 30.000">10.001 - 30.000</option>
-            <option value="30.001 - 60.000">30.001 - 60.000</option>
-            <option value="60.001 - 100.000">60.001 - 100.000</option>
-            <option value="Acima de 100.000">Acima de 100.000</option>
-        </select>
-
-        <label>Qual seu conhecimento sobre milhas?</label>
-        <select id="conhecimento">
-            <option value="Nenhum">Nenhum</option>
-            <option value="Básico">Básico</option>
-            <option value="Intermediário">Intermediário</option>
-            <option value="Avançado">Avançado</option>
-        </select>
-
-        <label>Qual seu objetivo com a consultoria?</label>
-        <textarea id="objetivo" rows="3" required></textarea>
-
-        <label>Para onde deseja viajar?</label>
-        <select id="destino">
-            <option value="América do Sul">América do Sul</option>
-            <option value="América do Norte">América do Norte</option>
-            <option value="Europa">Europa</option>
-            <option value="Ásia">Ásia</option>
-            <option value="África">África</option>
-            <option value="Oceania">Oceania</option>
-            <option value="Antártida">Antártida</option>
-        </select>
-
-        <label>Que tipo de viajante você é?</label>
-        <select id="viajante">
-            <option value="Econômico">Econômico</option>
-            <option value="Conforto moderado">Conforto moderado</option>
-            <option value="Luxo">Luxo</option>
-            <option value="Aventureiro">Aventureiro</option>
-        </select>
-
-        <label>Dúvidas adicionais</label>
-        <textarea id="duvidas" rows="3"></textarea>
-
-        <div class="btn-group">
-          <button class="btn-ig wpp" onclick="enviarWhatsApp()">
-            Enviar pelo WhatsApp
-          </button>
-          
+        <span class="error" id="error-nome"></span>
       </div>
-      
+  
+      <div class="form-group">
+        <label for="email">E-mail*</label>
+        <input type="email" id="email" required>
+        <span class="error" id="error-email"></span>
+      </div>
+  
+      <div class="form-group">
+        <label for="whatsapp">WhatsApp com DDD*</label>
+        <input type="tel" id="whatsapp" placeholder="Ex: 31999998888" required>
+        <span class="error" id="error-whatsapp"></span>
+      </div>
+  
+      <div class="form-group">
+        <label for="cartao">Você tem cartão de crédito?</label>
+        <select id="cartao">
+          <option value="Não">Não</option>
+          <option value="Sim">Sim</option>
+        </select>
+      </div>
+  
+      <div class="form-group" id="campoCartao" style="display:none;">
+        <label for="qualCartao">Se sim, qual banco/cartão?</label>
+        <input type="text" id="qualCartao" placeholder="Ex: Nubank, C6, Itaú...">
+        <span class="error" id="error-qualCartao"></span>
+      </div>
+  
+      <div class="form-group">
+        <label for="milhas">Quantas milhas você tem atualmente?</label>
+        <select id="milhas">
+          <option value="0">0</option>
+          <option value="1 - 10.000">1 - 10.000</option>
+          <option value="10.001 - 30.000">10.001 - 30.000</option>
+          <option value="30.001 - 60.000">30.001 - 60.000</option>
+          <option value="60.001 - 100.000">60.001 - 100.000</option>
+          <option value="Acima de 100.000">Acima de 100.000</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="conhecimento">Qual seu conhecimento sobre milhas?</label>
+        <select id="conhecimento">
+          <option value="Nenhum">Nenhum</option>
+          <option value="Básico">Básico</option>
+          <option value="Intermediário">Intermediário</option>
+          <option value="Avançado">Avançado</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="objetivo">Qual seu objetivo com a consultoria?*</label>
+        <textarea id="objetivo" rows="3" required></textarea>
+        <span class="error" id="error-objetivo"></span>
+      </div>
+  
+      <div class="form-group">
+        <label for="destino">Para onde deseja viajar?</label>
+        <select id="destino">
+          <option value="América do Sul">América do Sul</option>
+          <option value="América do Norte">América do Norte</option>
+          <option value="Europa">Europa</option>
+          <option value="Ásia">Ásia</option>
+          <option value="África">África</option>
+          <option value="Oceania">Oceania</option>
+          <option value="Antártida">Antártida</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="viajante">Que tipo de viajante você é?</label>
+        <select id="viajante">
+          <option value="Econômico">Econômico</option>
+          <option value="Conforto moderado">Conforto moderado</option>
+          <option value="Luxo">Luxo</option>
+          <option value="Aventureiro">Aventureiro</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="duvidas">Dúvidas adicionais</label>
+        <textarea id="duvidas" rows="3"></textarea>
+      </div>
+  
+      <button type="button" id="btnWhatsApp" class="btn wpp">
+        Enviar pelo WhatsApp
+      </button>
     </form>
-</section>
+  </section>
+  
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("formMilhas");
+    const btn = document.getElementById("btnWhatsApp");
+    const cartao = document.getElementById("cartao");
+    const campoCartao = document.getElementById("campoCartao");
+    const qualCartao = document.getElementById("qualCartao");
+  
+    // Função para validar cada campo individualmente
+    const validateField = (id) => {
+      const el = document.getElementById(id);
+      const errorEl = document.getElementById("error-" + id);
+      let value = el.value.trim();
+      let error = "";
+  
+      if (id === "nome" && !value) error = "Nome é obrigatório.";
+      if (id === "email" && !value) error = "E-mail é obrigatório.";
+      if (id === "whatsapp") {
+        if (!value) error = "WhatsApp é obrigatório.";
+        else if (value.replace(/\D/g, "").length < 10) error = "Número de WhatsApp inválido.";
+      }
+      if (id === "objetivo" && !value) error = "Objetivo é obrigatório.";
+      if (id === "qualCartao" && cartao.value === "Sim" && !value) error = "Informe qual cartão de crédito.";
+  
+      errorEl.textContent = error;
+      return !error;
+    };
+  
+    // Validação em tempo real
+    ["nome", "email", "whatsapp", "objetivo", "qualCartao"].forEach(id => {
+      const el = document.getElementById(id);
+      el.addEventListener("input", () => validateField(id));
+    });
+  
+    // Mostrar ou esconder campo do cartão dinamicamente
+    cartao.addEventListener("change", () => {
+      if (cartao.value === "Sim") {
+        campoCartao.style.display = "block";
+      } else {
+        campoCartao.style.display = "none";
+        qualCartao.value = "";
+        document.getElementById("error-qualCartao").textContent = "";
+      }
+    });
+  
+    btn.addEventListener("click", () => {
+      // Valida todos os campos
+      const fields = ["nome", "email", "whatsapp", "objetivo", "qualCartao"];
+      const valid = fields.map(f => validateField(f)).every(v => v);
+  
+      if (!valid) return;
+  
+      const nome = document.getElementById("nome").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const whatsapp = document.getElementById("whatsapp").value.trim();
+      const objetivo = document.getElementById("objetivo").value.trim();
+      const milhas = document.getElementById("milhas").value;
+      const conhecimento = document.getElementById("conhecimento").value;
+      const destino = document.getElementById("destino").value;
+      const viajante = document.getElementById("viajante").value;
+      const duvidas = document.getElementById("duvidas").value.trim();
+  
+      // Monta mensagem
+      let mensagem = `Olá! Gostaria de uma consultoria de milhas.
+  
+  Nome: ${nome}
+  E-mail: ${email}
+  WhatsApp: ${whatsapp}
+  Possui cartão de crédito: ${cartao.value}
+  ${cartao.value === "Sim" ? `Qual cartão: ${qualCartao.value}\n` : ""}
+  Milhas atuais: ${milhas}
+  Conhecimento sobre milhas: ${conhecimento}
+  Objetivo da consultoria: ${objetivo}
+  Destino desejado: ${destino}
+  Tipo de viajante: ${viajante}
+  ${duvidas ? `Dúvidas adicionais: ${duvidas}` : ""}`;
+  
+      const numeroDestino = "553171183321"; // substitua pelo número real
+      window.open(`https://wa.me/${numeroDestino}?text=${encodeURIComponent(mensagem)}`, "_blank");
+  
+      form.reset();
+      campoCartao.style.display = "none";
+    });
+  });
+  </script>
+  
+  <style>
+  .error {
+    color: red;
+    font-size: 0.85em;
+    margin-top: 2px;
+    display: block;
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }
+  </style>
+  
+  
+  
+
+
 <footer class="site-footer">
     <div class="container footer-inner">
       <small>© <span id="year"></span> Estefany</small>
