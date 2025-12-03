@@ -4,7 +4,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  
 }
 
 :root {
@@ -32,6 +32,8 @@ body {
   color: var(--text);
   line-height: 1.6;
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
 }
 
 /* =======================================
@@ -584,7 +586,9 @@ roteiro
   text-decoration: none;
   transition: all .35s ease;
 }
-
+.bloco-verde p{
+  color: #fff;
+}
 /* ==== HOVER NO BOTÃO ==== */
 .bloco-verde .btn.wpp:hover {
   transform: scale(1.07);
@@ -1687,6 +1691,57 @@ section.hero2:hover img {
     font-size: 0.9rem;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 button.disabled {
   opacity: 0.6;
