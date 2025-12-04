@@ -273,28 +273,11 @@
     </div>
   </footer>
   <script>
-// Menu hamburguer
-const navToggle = document.querySelector('.nav-toggle');
-const navList = document.querySelector('.nav-list');
+const toggle = document.querySelector('.nav-toggle');
+const menu = document.querySelector('.nav-list');
 
-navToggle.addEventListener('click', () => {
-  navList.classList.toggle('show');
-  navToggle.classList.toggle('open');
-});
-
-// Voltar ao topo
-const topButton = document.getElementById('topButton');
-
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 300) {
-    topButton.style.display = "block";
-  } else {
-    topButton.style.display = "none";
-  }
-});
-
-topButton.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+toggle.addEventListener('click', () => {
+  menu.classList.toggle('open');
 });
   </script>
   <script src="javascript/script.js" defer></script>

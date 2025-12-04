@@ -75,20 +75,11 @@
     </div>
   </footer>
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const navToggle = document.querySelector(".nav-toggle");
-  const navList = document.querySelector(".nav-list");
+const toggle = document.querySelector('.nav-toggle');
+const menu = document.querySelector('.nav-list');
 
-  navToggle.addEventListener("click", () => {
-    navList.classList.toggle("show");
-  });
-
-  // Fechar menu ao clicar em um link
-  navList.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", () => {
-      navList.classList.remove("show");
-    });
-  });
+toggle.addEventListener('click', () => {
+  menu.classList.toggle('open');
 });
 </script>
   <script src="scripts.js" defer></script>

@@ -20,7 +20,7 @@
         <li><a href="roteiros.html">Roteiros</a></li>
         <li><a href="consultoria.html">Consultoria</a></li>
         <li><a href="mentoria.html">Mentoria</a></li>
-        
+
       </ul>
     </nav>
   </div>
@@ -128,28 +128,11 @@ document.getElementById("btnAssessoria").addEventListener("click", (e) => {
     // Abrir WhatsApp
     window.open(`https://wa.me/${numeroWhats}?text=${encodeURIComponent(mensagem)}`, "_blank");
 });
-// Menu hamburguer
-const navToggle = document.querySelector('.nav-toggle');
-const navList = document.querySelector('.nav-list');
+const toggle = document.querySelector('.nav-toggle');
+const menu = document.querySelector('.nav-list');
 
-navToggle.addEventListener('click', () => {
-  navList.classList.toggle('show');
-  navToggle.classList.toggle('open');
-});
-
-// Voltar ao topo
-const topButton = document.getElementById('topButton');
-
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 300) {
-    topButton.style.display = "block";
-  } else {
-    topButton.style.display = "none";
-  }
-});
-
-topButton.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+toggle.addEventListener('click', () => {
+  menu.classList.toggle('open');
 });
 </script>
 </body>
