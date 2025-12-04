@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!form || !btn) return;
 
   btn.addEventListener("click", () => {
-    // Campos obrigatórios
     const nome = document.getElementById("nome").value.trim();
     const email = document.getElementById("email").value.trim();
     const whatsapp = document.getElementById("whatsapp").value.trim();
@@ -21,7 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const cartao = document.getElementById("cartao").value;
     const qualCartao = document.getElementById("qualCartao").value.trim();
 
-    // Validação
     if (!nome || !email || !whatsapp || !objetivo) {
       alert("Por favor, preencha todos os campos obrigatórios (*)");
       return;
@@ -45,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const viajante = document.getElementById("viajante").value;
     const duvidas = document.getElementById("duvidas").value.trim();
 
-    // Monta a mensagem
+
     let mensagem = `Olá! Gostaria de uma consultoria de milhas.
 
 Nome: ${nome}
@@ -60,13 +58,13 @@ Destino desejado: ${destino}
 Tipo de viajante: ${viajante}
 ${duvidas ? `Dúvidas adicionais: ${duvidas}` : ""}`;
 
-    // Número do WhatsApp (formato internacional)
-    const numeroDestino = "553171183321"; // substitua pelo número real
+  
+    const numeroDestino = "553171183321"; 
 
-    // Redireciona para WhatsApp
+  
     window.open(`https://wa.me/${numeroDestino}?text=${encodeURIComponent(mensagem)}`, "_blank");
 
-    // Limpa o formulário
+
     form.reset();
   });
 });
@@ -89,19 +87,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const whatsapp = document.getElementById("whatsapp").value.trim();
     const objetivo = document.getElementById("objetivo").value.trim();
 
-    // Número do WhatsApp da mentoria (em formato internacional)
+
     const numeroDestino = "5531971183321";
 
-    // Monta a mensagem
+
     const mensagem = `Olá! Quero participar da mentoria.
 Nome: ${nome}
 WhatsApp: ${whatsapp}
 Objetivo: ${objetivo}`;
 
-    // Abre WhatsApp
+
     window.open(`https://wa.me/${numeroDestino}?text=${encodeURIComponent(mensagem)}`, "_blank");
 
-    // Limpa formulário
+
     form.reset();
   });
 });

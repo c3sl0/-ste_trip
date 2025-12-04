@@ -1,6 +1,4 @@
-/* =======================================
-   RESET E VARIÁVEIS
-======================================= */
+
 * {
   margin: 0;
   padding: 0;
@@ -38,18 +36,13 @@ body {
   overflow-x: hidden;
 }
 
-/* =======================================
-   CONTAINER GLOBAL
-======================================= */
+
 .container {
   width: 90%;
   max-width: var(--container);
   margin: auto;
 }
 
-/* =======================================
-   HEADER FIXO
-======================================= */
 .site-header {
   width: 100%;
   background: var(--bg);
@@ -103,7 +96,7 @@ body {
   color: var(--primary);
 }
 
-/* HAMBURGER */
+
 .nav-toggle {
   position: relative;
   z-index: 99999 !important;
@@ -116,10 +109,6 @@ body {
   transition: color 0.3s ease;
 }
 
-
-/* =======================================
-   HERO
-======================================= */
 .hero {
   margin-top: 90px;
   padding: 80px 0;
@@ -171,9 +160,7 @@ body {
   background: var(--primary-dark);
 }
 
-/* =======================================
-   SOBRE MIM — FOTO | TEXTO | FOTO
-======================================= */
+
 .about {
   padding: 80px 0;
 }
@@ -191,7 +178,7 @@ body {
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1.2fr 1fr; /* FOTO | TEXTO | FOTO */
+  grid-template-columns: 1fr 1.2fr 1fr;
   gap: 40px;
   align-items: center;
   text-align: center;
@@ -200,8 +187,8 @@ body {
 .about-grid div {
   display: flex;
   flex-direction: column;
-  justify-content: center;   /* centraliza verticalmente */
-  align-items: center;       /* centraliza horizontalmente */
+  justify-content: center;  
+  align-items: center;       
 }
 
 .about-grid p {
@@ -215,9 +202,6 @@ body {
   object-fit: cover;
 }
 
-/* =======================================
-   FOOTER
-======================================= */
 .site-footer {
   background: #007aff;
   padding: 30px 0;
@@ -241,16 +225,12 @@ body {
   color: var(--primary);
 }
 
-/* =======================================
-   RESPONSIVIDADE
-======================================= */
 @media (max-width: 880px) {
 
   .hero {
     padding: 60px 0;
   }
 
-  /* Sobre Mim no celular — vira 1 coluna */
   .about-grid {
     grid-template-columns: 1fr;
   }
@@ -277,16 +257,6 @@ body {
     cursor: pointer;
   }
 }
-
-/***********************
-Portifolio 
-
-*****************************/
-
-
-/**********************
-roteiro
-*******************/
 
 .int {
   width: 90%;
@@ -330,7 +300,7 @@ roteiro
   cursor: pointer;
 }
 
-/* ÍCONE */
+
 .items .icon {
   width: 42px;
   height: 42px;
@@ -346,7 +316,6 @@ roteiro
   transition: .35s ease;
 }
 
-/* ==== HOVER NOS CARDS ==== */
 .items:hover {
   transform: translateY(-6px) scale(1.03);
   box-shadow: 0 10px 24px rgba(0,0,0,0.12);
@@ -396,25 +365,18 @@ roteiro
 .bloco-verde p{
   color: #fff;
 }
-/* ==== HOVER NO BOTÃO ==== */
+
 .bloco-verde .btn.wpp:hover {
   transform: scale(1.07);
   box-shadow: 0 6px 18px rgba(0,0,0,0.18);
 }
 
-
-/*******************************
-
-consultoria 
-
-*******************************/
 section {
   padding: 90px 18px;
   max-width: 1100px;
   margin: auto;
 }
 
-/* Títulos leves e espaçosos */
 h1, h2 {
   font-weight: 600;
   letter-spacing: -0.5px;
@@ -436,11 +398,6 @@ p {
   margin-bottom: 15px;
 }
 
-/* ===================================== */
-/* ANIMAÇÕES SUAVES */
-/* ===================================== */
-
-/* Fade-up estilo Apple: leve, clean, suave */
 .fade-up {
   opacity: 0;
   transform: translateY(20px);
@@ -454,7 +411,6 @@ p {
   }
 }
 
-/* Hover com sombra ultraleve */
 .card-hover {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
@@ -463,10 +419,6 @@ p {
   transform: translateY(-5px);
   box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
-
-/* ===================================== */
-/* INTRO */
-/* ===================================== */
 
 .intr {
   text-align: center;
@@ -481,10 +433,6 @@ p {
 .intr .sub span {
   color: #007aff; /* azul Apple */
 }
-
-/* ===================================== */
-/* BENEFÍCIOS */
-/* ===================================== */
 
 .beneficio {
   margin-top: 60px;
@@ -507,10 +455,6 @@ p {
   display: inline-block;
 }
 
-/* ===================================== */
-/* BLOCO COMO FUNCIONA */
-/* ===================================== */
-
 .row,
 .row-reverse {
   display: flex;
@@ -527,7 +471,6 @@ p {
   transition: 0.3s ease;
 }
 
-/* Efeito Apple de zoom suave */
 .row img:hover {
   transform: scale(1.015);
 }
@@ -541,17 +484,13 @@ p {
   flex-direction: row-reverse;
 }
 
-/* Subtítulos */
+
 .contente h4 {
   margin-top: 20px;
   font-size: 1.1rem;
   color: #007aff;
   font-weight: 500;
 }
-
-/* ===================================== */
-/* VALORES */
-/* ===================================== */
 
 .valores {
   text-align: center;
@@ -588,7 +527,7 @@ p {
   color: #666;
 }
 
-/* Botão estilo Apple */
+
 .btn {
   margin-top: 35px;
   display: inline-block;
@@ -606,9 +545,6 @@ p {
   background: #006be0;
 }
 
-/* ===================================== */
-/* RESPONSIVO */
-/* ===================================== */
 
 @media (max-width: 768px) {
   h2 {
@@ -627,14 +563,6 @@ p {
 }
 
 
-
-
-
-/************************************
-
-formulario
-
-********************************/
 .input-error {
   border: 2px solid #007aff !important;
   background: #ffecec !important;
@@ -676,7 +604,7 @@ formulario
   font-family: "Inter", sans-serif;
 }
 
-/* Foco profissional */
+
 .ig-form input:focus,
 .ig-form select:focus,
 .ig-form textarea:focus {
@@ -686,7 +614,7 @@ formulario
   outline: none;
 }
 
-/* Select com seta suave */
+
 .ig-form select {
   appearance: none;
   background-image: url("data:image/svg+xml,%3Csvg fill='gray' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
@@ -694,14 +622,9 @@ formulario
   background-position: 98% center;
 }
 
-/* Textarea */
 .ig-form textarea {
   resize: vertical;
 }
-
-/* ================================
-   BOTÕES
-================================ */
 
 .btn-group {
   margin-top: 10px;
@@ -720,7 +643,7 @@ formulario
   font-family: "Inter", sans-serif;
 }
 
-/* Botão WhatsApp */
+
 .btn-ig.wpp {
   background: #25d366;
   color: #fff;
@@ -730,10 +653,6 @@ formulario
   background: #1ebe5c;
   transform: translateY(-2px);
 }
-
-/* ================================
-   RESPONSIVO
-================================ */
 
 @media (max-width: 600px) {
   .ig-carde {
@@ -767,15 +686,6 @@ formulario
   color: #222;
 }
 
-
-
-
-/***********************************************
-
-guia
-
-**********************/
-
 .fade {
   opacity: 0;
   animation: fadeIn 1s ease forwards;
@@ -784,10 +694,6 @@ guia
 @keyframes fadeIn {
   to { opacity: 1; }
 }
-
-/* ==============================
-   SEÇÃO INTRO
-================================= */
 
 .intro {
   text-align: center;
@@ -805,7 +711,7 @@ guia
   display: inline-block;
 }
 
-/* Linha decorativa no título */
+
 .intro h2::after {
   content: "";
   display: block;
@@ -816,9 +722,7 @@ guia
   margin: 10px auto 0;
 }
 
-/* ==============================
-   BENEFÍCIOS
-================================= */
+
 .beneficios {
   padding: 40px 20px;
   max-width: 950px;
@@ -851,10 +755,7 @@ guia
   font-weight: 600;
 }
 
-/* ==============================
-   GUIAS – CARDS
-================================= */
-/* Grid responsivo */
+
 .guias {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -874,8 +775,6 @@ guia
   }
 }
 
-/* Botão do card */
-/* Botão do card */
 .guias {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -899,7 +798,6 @@ guia
   }
 }
 
-/* Botão do card */
 .card-btn {
   position: relative;
   border: none;
@@ -916,7 +814,6 @@ guia
   transition: transform 0.5s ease, box-shadow 0.3s ease;
 }
 
-/* Imagem padronizada */
 .card-btn img {
   width: 100%;
   height: 200px;
@@ -926,14 +823,13 @@ guia
   border-bottom: 1px solid #ddd;
 }
 
-/* Título */
+
 .card-btn h4 {
   margin: 10px 0 5px 0;
   font-weight: bold;
   text-align: center;
 }
 
-/* Preço centralizado */
 .card-btn .preco {
   font-size: 1.2em;
   font-weight: bold;
@@ -942,7 +838,7 @@ guia
   text-align: center;
 }
 
-/* Overlay WhatsApp */
+
 .card-btn .overlay {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -959,7 +855,7 @@ guia
   border-radius: 12px;
 }
 
-/* Hover Effects */
+
 .card-btn:hover img {
   transform: scale(1.1) translateY(-5px);
   filter: brightness(0.7);
@@ -973,11 +869,6 @@ guia
   transform: translateY(-10px);
   box-shadow: 0 15px 25px rgba(0,0,0,0.3);
 }
-/**************************************
-
-mentoria
-
-******************/
 
 @keyframes fade {
   from { opacity: 0; transform: translateY(15px); }
@@ -988,9 +879,6 @@ section {
   animation: fade .9s ease forwards;
 }
 
-/* =======================================
-   TÍTULOS COM LINHA DECORATIVA
-======================================= */
 section h2 {
   text-align: center;
   font-size: 1.9rem;
@@ -1009,9 +897,6 @@ section h2::after {
   border-radius: 3px;
 }
 
-/* =======================================
-   O QUE VOCÊ RECEBE — CARDS
-======================================= */
 .intrs {
   padding: 60px 20px;
   max-width: 1150px;
@@ -1048,9 +933,6 @@ section h2::after {
   opacity: .85;
 }
 
-/* =======================================
-   STEPS — JORNADA DA MENTORIA
-======================================= */
 .steps {
   padding: 60px 20px;
   max-width: 950px;
@@ -1072,9 +954,6 @@ section h2::after {
   color: #007aff;
 }
 
-/* =======================================
-   FORMULÁRIO — PROFISSIONAL & MINIMAL
-======================================= */
 .calls {
   padding: 70px 20px 90px;
   text-align: center;
@@ -1117,7 +996,6 @@ textarea {
   height: 130px;
 }
 
-/* Botão */
 .btn-primary {
   background: #006be0;
   color: #fff;
@@ -1137,258 +1015,6 @@ textarea {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ===========================
-   HERO — LARGURA TOTAL, ALTURA RESPONSIVA
-   COM TEXTO CENTRALIZADO
-=========================== */
-
-
 header.hero1,
 header.hero2,
 section.hero2 {
@@ -1406,7 +1032,7 @@ section.hero2 {
   text-align: center;       /* texto centralizado */
 }
 
-/* Imagem inteira, nítida */
+
 header.hero1 img,
 header.hero2 img,
 section.hero2 img {
@@ -1422,14 +1048,12 @@ section.hero2 img {
   transition: filter 0.5s;
 }
 
-/* Hover leve: brilho */
 header.hero1:hover img,
 header.hero2:hover img,
 section.hero2:hover img {
   filter: brightness(1.05) contrast(1.1) saturate(1.2);
 }
 
-/* Texto sobreposto */
 .hero1-text,
 .hero2-text {
   position: relative;  /* relativo para ficar sobre a imagem */
@@ -1439,7 +1063,6 @@ section.hero2:hover img {
   text-shadow: 0 3px 12px rgba(255, 255, 255, 0.6);
 }
 
-/* Texto estilizado */
 .hero1-text h1,
 .hero2-text h1 {
   font-family: 'Playfair Display', serif;
@@ -1454,9 +1077,6 @@ section.hero2:hover img {
   line-height: 1.5;
 }
 
-/* ===========================
-   RESPONSIVO
-=========================== */
 @media (max-width: 1024px) {
   header.hero1,
   header.hero2,
@@ -1499,80 +1119,11 @@ section.hero2:hover img {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 button.disabled {
   opacity: 0.6;
   cursor: not-allowed;
   pointer-events: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .preview-modal {
   position: fixed;

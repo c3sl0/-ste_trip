@@ -172,17 +172,15 @@
     </div>
   </div>
 </footer>
-
-<!-- BOTÃO VOLTAR TOPO -->
 <button id="topButton">⬆</button>
 
 <script src="script.js"></script>
 <script>
  document.addEventListener("DOMContentLoaded", () => {
-  const cards = document.querySelectorAll(".card-btn"); // seleciona todos os cards
-  const numeroDestino = "553171183321"; // substitua pelo número real
+  const cards = document.querySelectorAll(".card-btn");
+  const numeroDestino = "553171183321";
 
-  // Fade-in sequencial
+
   cards.forEach((card, index) => {
     card.style.opacity = 0;
     card.style.transform = "translateY(20px)";
@@ -193,10 +191,10 @@
     }, index * 150);
   });
 
-  // Clique para abrir WhatsApp com destino específico
+ 
   cards.forEach(card => {
     card.addEventListener("click", () => {
-      const destino = card.querySelector("h4").textContent.trim(); // pega o destino do h4
+      const destino = card.querySelector("h4").textContent.trim(); 
       const mensagem = `Gostaria de fechar o guia para ${destino}`;
       const url = `https://wa.me/${numeroDestino}?text=${encodeURIComponent(mensagem)}`;
       window.open(url, "_blank");

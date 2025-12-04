@@ -144,8 +144,6 @@
     const cartao = document.getElementById("cartao");
     const campoCartao = document.getElementById("campoCartao");
     const qualCartao = document.getElementById("qualCartao");
-  
-    // Função para validar cada campo individualmente
     const validateField = (id) => {
       const el = document.getElementById(id);
       const errorEl = document.getElementById("error-" + id);
@@ -164,14 +162,10 @@
       errorEl.textContent = error;
       return !error;
     };
-  
-    // Validação em tempo real
     ["nome", "email", "whatsapp", "objetivo", "qualCartao"].forEach(id => {
       const el = document.getElementById(id);
       el.addEventListener("input", () => validateField(id));
     });
-  
-    // Mostrar ou esconder campo do cartão dinamicamente
     cartao.addEventListener("change", () => {
       if (cartao.value === "Sim") {
         campoCartao.style.display = "block";
@@ -183,7 +177,6 @@
     });
   
     btn.addEventListener("click", () => {
-      // Valida todos os campos
       const fields = ["nome", "email", "whatsapp", "objetivo", "qualCartao"];
       const valid = fields.map(f => validateField(f)).every(v => v);
   
@@ -198,8 +191,6 @@
       const destino = document.getElementById("destino").value;
       const viajante = document.getElementById("viajante").value;
       const duvidas = document.getElementById("duvidas").value.trim();
-  
-      // Monta mensagem
       let mensagem = `Olá! Gostaria de uma consultoria de milhas.
   
   Nome: ${nome}
